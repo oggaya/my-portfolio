@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo">MyPortfolio</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Home</a></li>
+                    <li><a href="#apropos">About Me</a></li>
+                    <li><a href="#projets">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+					 <li><a href="#competences">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECTION ACCUEIL -->
+    <section id="accueil" class="hero">
+        <div class="container">
+           <h2>Welcome to my portfolio</h2>
+<p>I am a passionate developer, here are my projects!</p>
+<a href="#projets" class="btn">See my projects</a>
+        </div>
+    </section>
+
+    <!-- SECTION À PROPOS -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>About me</h2>
+            <p>Hello, my name is Gaya BOUNDER, I am 19 years old, and I will be entering my second year of the Bachelor's in Computer Science (BUT Informatique) in September 2025.
+I have chosen Track B, specializing in the development of secure and communicative applications.
+Passionate about mathematics and engineering sciences, I have always aspired to work in an innovative field, which is why I chose computer science.</p>
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+    <h3>Project 1</h3>
+    <div class="project-content">
+        <div class="project-description">
+            <p>During my first year, I worked on various projects. Most notably, I collaborated with a team 
+            to develop a video game using C++. This experience taught me how to effectively work with a shared codebase.
+            I became proficient with **GitHub**, which your company uses for managing and sharing code. I implemented automatically moving 
+            enemies with random patterns and created boundary systems to contain players within level rooms. 
+            The game's goal is simple: collect all pieces while avoiding death to win.</p>
+        </div>
+        <div class="project-images">
+            <img src="assets/images/projects/project1-image.jpg" alt="Project 1 Image" class="project-image">
+            <img src="assets/images/projects/project1-image2.jpg" alt="Project 1 Image 2" class="project-image">
+        </div>
+    </div>
+                <div class="project-item">
+                    <h3>Project 2</h3>
+                    <p>Description rapide de ce projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- SECTION COMPÉTENCES -->
+<!-- SECTION COMPÉTENCES -->
+<section id="competences" class="skills">
+    <div class="container">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <!-- C++ -->
+            <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/images/langages/cpp.png" alt="C++">
+                <p>C++</p>
+            </div>
+            <!-- C# -->
+            <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/langages/csharp.png" alt="C#">
+                <p>C#</p>
+            </div>
+            <!-- Python -->
+            <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/images/langages/python.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <!-- HTML -->
+            <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/images/langages/html.png" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <!-- CSS -->
+            <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+                <img src="assets/images/langages/css.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <!-- ASM64 -->
+            <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
+                <img src="assets/images/langages/asm64.png" alt="ASM64">
+                <p>ASM64</p>
+            </div>
+			 <!-- JAVA-->
+            <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
+                <img src="assets/images/langages/java.png" alt="JAVA">
+                <p>JAVA</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- SECTION CONTACT -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Vous pouvez me joindre via les moyens suivants :</p>
+        <ul class="contact-links">
+            <li><strong>📩 Email:</strong> <a href="mailto:gaya.mailpro@gmail.com">gaya.mailpro@gmail.com</a></li>
+            <li><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/gaya-bounder/" target="_blank">Mon LinkedIn</a></li>
+            <li><strong>🔗 GitHub:</strong> <a href="https://github.com/oggaya" target="_blank">Mon GitHub</a></li>
+        </ul>
+    </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MonPortfolio. Tous droits réservés.</p>
+        </div>
+    </footer>
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,  // durée de l'animation
+        easing: 'ease-in-out',  // effet d'accélération et ralentissement
+        once: true  // L'animation se déclenche uniquement une fois lors du scroll
+    });
+</script>
+</body>
+</html>
