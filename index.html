@@ -14,6 +14,11 @@
             <div class="logo-container">
                <img src="assets/images/logo.png" alt="Ma photo" class="logo-img">
                <h1 class="logo">MonPortfolio</h1>
+               <button class="menu-toggle" aria-label="Menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
             </div>
             <nav>
                <ul class="nav-links">
@@ -167,5 +172,14 @@
              once: true  // L'animation se déclenche uniquement une fois lors du scroll
          });
       </script>
+      <script>
+         const menuToggle = document.querySelector('.menu-toggle');
+         const navLinks = document.querySelector('.nav-links');
+      
+         menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+         });
+      </script>
+      
    </body>
 </html>
