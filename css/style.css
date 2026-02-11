@@ -149,6 +149,8 @@ header {
     background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
 }
 
+
+/* Cherche la section .hero::before */
 .hero::before {
     content: '';
     position: absolute;
@@ -156,19 +158,18 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../assets/images/hero.jpg') center/cover no-repeat;
-    opacity: 0.15;
+    /* Assure-toi que le chemin est bon */
+    background: url('../assets/images/hero.jpg') center/cover no-repeat; 
+    
+    opacity: 1; /* CHANGE ICI : mets 1 au lieu de 0.15 pour voir l'image */
     z-index: 0;
 }
 
+/* Cherche la section .hero-overlay */
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(15, 15, 15, 0.7) 0%, rgba(15, 15, 15, 0.9) 100%);
-    z-index: 1;
+    /* Si tu veux voir l'image brute, rend l'overlay transparent ou supprime-le */
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.3) 0%, rgba(15, 15, 15, 0.8) 100%);
+    /* J'ai baissé l'opacité du noir pour qu'on voie le bleu de ton image */
 }
 
 .hero-content {
