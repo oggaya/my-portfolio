@@ -138,19 +138,23 @@ header {
 /* ========================================
    HERO SECTION
    ======================================== */
+/* ========================================
+   HERO SECTION (Version Bannière)
+   ======================================== */
 .hero {
-    min-height: 100vh;
+    /* AVANT c'était min-height: 100vh (tout l'écran) */
+    /* MAINTENANT : on réduit pour faire une bannière */
+    min-height: 50vh; /* Occupe la moitié de l'écran (ajuste à 40vh si tu veux plus fin) */
+    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px; /* Un peu moins de marge en haut */
     position: relative;
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    background-color: #0f0f0f; /* Couleur de fond au cas où */
 }
 
-
-/* Cherche la section .hero::before */
 .hero::before {
     content: '';
     position: absolute;
@@ -158,19 +162,29 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Assure-toi que le chemin est bon */
-    background: url('../assets/images/hero.jpg') center/cover no-repeat; 
     
-    opacity: 1; /* CHANGE ICI : mets 1 au lieu de 0.15 pour voir l'image */
+    /* L'image de fond */
+    background: url('../assets/images/hero.jpg') center center / cover no-repeat;
+    
+    /* ASTUCE PRO : Parallax */
+    /* Cela garde l'image fixe quand tu scrolles, ça rend souvent SUPER bien pour les bannières */
+    background-attachment: fixed; 
+    
+    opacity: 1; /* On voit bien l'image */
     z-index: 0;
 }
 
-/* Cherche la section .hero-overlay */
 .hero-overlay {
-    /* Si tu veux voir l'image brute, rend l'overlay transparent ou supprime-le */
-    background: linear-gradient(180deg, rgba(15, 15, 15, 0.3) 0%, rgba(15, 15, 15, 0.8) 100%);
-    /* J'ai baissé l'opacité du noir pour qu'on voie le bleu de ton image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.7) 0%, rgba(15, 15, 15, 0.9) 100%);
+    z-index: 1;
 }
+
+
 
 .hero-content {
     position: relative;
