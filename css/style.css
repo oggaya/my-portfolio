@@ -142,17 +142,17 @@ header {
    HERO SECTION (Version Bannière)
    ======================================== */
 .hero {
-    /* AVANT c'était min-height: 100vh (tout l'écran) */
-    /* MAINTENANT : on réduit pour faire une bannière */
-    min-height: 50vh; /* Occupe la moitié de l'écran (ajuste à 40vh si tu veux plus fin) */
-    
+    min-height: 60vh; /* Un tout petit peu plus haut pour respirer */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px; /* Un peu moins de marge en haut */
+    
+    /* C'EST ICI LE FIX : passe de 80px à 130px */
+    padding-top: 130px; 
+    
     position: relative;
-    background-color: #0f0f0f; /* Couleur de fond au cas où */
+    background-color: #0f0f0f;
 }
 
 .hero::before {
