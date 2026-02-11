@@ -7,7 +7,6 @@
       <meta name="keywords" content="Gaya Bounder, Portfolio, Développeur, Informatique, BUT Informatique, C++, C#, Python, SQL, Projets">
       <meta name="author" content="Gaya Bounder">
       
-      <!-- Open Graph / Social Media -->
       <meta property="og:type" content="website">
       <meta property="og:title" content="Portfolio - Gaya Bounder">
       <meta property="og:description" content="Étudiant en BUT Informatique passionné par le développement et les mathématiques">
@@ -15,14 +14,10 @@
       
       <title>Portfolio - Gaya Bounder | Développeur & Étudiant en Informatique</title>
       
-   
-      
-      <!-- Stylesheets -->
       <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
-      <!-- Header avec navigation -->
       <header role="banner">
          <div class="container nav-container">
             <div class="logo-container">
@@ -46,13 +41,10 @@
          </div>
       </header>
       
-      <!-- Section Hero -->
       <section id="accueil" class="hero">
          <div class="hero-overlay"></div>
          <div class="container hero-content">
-            <h2>Bienvenue sur mon Portfolio</h2>
-            <p class="hero-subtitle">Je m'appelle Gaya, c'est un plaisir de vous accueillir sur mon site.</p>
-            <p class="hero-description">Je suis un grand passionné de développement informatique mais également de mathématiques !</p>
+            <div style="margin-top: 250px;"></div> 
             <div class="hero-buttons">
                <a href="#projets" class="btn btn-primary">Voir mes Projets</a>
                <a href="assets/images/CV-Gaya-Bounder.pdf" class="btn btn-secondary" target="_blank" rel="noopener" download aria-label="Télécharger le CV de Gaya Bounder au format PDF">Télécharger mon CV</a>
@@ -60,7 +52,6 @@
          </div>
       </section>
 
-      <!-- Section À Propos -->
       <section id="apropos" class="about">
          <div class="container">
             <h2>À propos de moi</h2>
@@ -103,7 +94,6 @@
          </div>
       </section>
 
-      <!-- Section Projets -->
       <section id="projets" class="projects">
          <div class="container">
             <h2>Mes projets</h2>
@@ -175,7 +165,6 @@
          </div>
       </section>
 
-      <!-- Section Compétences -->
       <section id="competences" class="skills">
          <div class="container">
             <h2>Mes Compétences</h2>
@@ -235,7 +224,6 @@
          </div>
       </section>
 
-      <!-- Section Contact -->
       <section id="contact" class="contact">
          <div class="container">
             <h2>Contact</h2>
@@ -260,22 +248,18 @@
          </div>
       </section>
 
-      <!-- Bouton retour en haut -->
       <button id="backToTop" class="back-to-top" aria-label="Retour en haut de la page" title="Retour en haut">
          ↑
       </button>
 
-      <!-- Footer -->
       <footer role="contentinfo">
          <div class="container">
             <p>&copy; 2026 Gaya Bounder. Tous droits réservés.</p>
          </div>
       </footer>
 
-      <!-- Scripts -->
       <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
       <script>
-         // Animation AOS
          AOS.init({
              duration: 1000,
              easing: 'ease-in-out',
@@ -283,7 +267,6 @@
              offset: 100
          });
 
-         // Menu mobile
          const menuToggle = document.querySelector('.menu-toggle');
          const navLinks = document.querySelector('.nav-links');
          
@@ -293,7 +276,6 @@
             menuToggle.setAttribute('aria-expanded', !isExpanded);
          });
 
-         // Fermer le menu au clic sur un lien
          document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                navLinks.classList.remove('active');
@@ -301,7 +283,6 @@
             });
          });
 
-         // Bouton retour en haut
          const backToTopButton = document.getElementById('backToTop');
          
          window.addEventListener('scroll', () => {
@@ -319,7 +300,6 @@
             });
          });
 
-         // Navigation smooth scroll
          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                e.preventDefault();
