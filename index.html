@@ -3,167 +3,242 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Portfolio de Gaya Bounder - Étudiant en BUT Informatique spécialisé en administration et gestion de données. Découvrez mes projets en développement et mes compétences techniques.">
+      <meta name="description" content="Portfolio de Gaya Bounder - Étudiant en BUT Informatique spécialisé en administration et gestion de données.">
       <meta name="keywords" content="Gaya Bounder, Portfolio, Développeur, Informatique, BUT Informatique, C++, C#, Python, SQL, Projets">
       <meta name="author" content="Gaya Bounder">
-      
       <meta property="og:type" content="website">
       <meta property="og:title" content="Portfolio - Gaya Bounder">
       <meta property="og:description" content="Étudiant en BUT Informatique passionné par le développement et les mathématiques">
-      <meta property="og:url" content="https://votre-url.com">
-      
       <title>Portfolio - Gaya Bounder | Développeur & Étudiant en Informatique</title>
-      
+
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-      
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
-      <header role="banner">
-         <div class="container nav-container">
-            <div class="logo-container">
-               <img src="assets/images/logo.png" alt="Photo de profil de Gaya Bounder" class="logo-img" width="70" height="70">
-               <h1 class="logo">Gaya Bounder</h1>
-               <button class="menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-               </button>
+
+      <!-- ═══════════════ HEADER ═══════════════ -->
+      <header role="banner" id="header">
+         <div class="header-inner">
+            <div class="logo-block">
+               <img src="assets/images/logo.png" alt="Photo de profil de Gaya Bounder" class="logo-img">
+               <span class="logo-name">Gaya Bounder</span>
             </div>
+
             <nav role="navigation" aria-label="Navigation principale">
                <ul class="nav-links">
+                  <li><span class="nav-sep">|</span></li>
                   <li><a href="#accueil">Accueil</a></li>
+                  <li><span class="nav-sep">|</span></li>
                   <li><a href="#apropos">À Propos</a></li>
+                  <li><span class="nav-sep">|</span></li>
                   <li><a href="#projets">Projets</a></li>
+                  <li><span class="nav-sep">|</span></li>
                   <li><a href="#competences">Compétences</a></li>
+                  <li><span class="nav-sep">|</span></li>
                   <li><a href="#contact">Contact</a></li>
+                  <li><span class="nav-sep">|</span></li>
                </ul>
             </nav>
+
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+               <span></span><span></span><span></span>
+            </button>
          </div>
+
+         <!-- Mobile nav -->
+         <nav class="mobile-nav" id="mobileNav">
+            <ul>
+               <li><a href="#accueil">Accueil</a></li>
+               <li><a href="#apropos">À Propos</a></li>
+               <li><a href="#projets">Projets</a></li>
+               <li><a href="#competences">Compétences</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
       </header>
-      
+
+      <!-- ═══════════════ HERO ═══════════════ -->
       <section id="accueil" class="hero">
+         <div class="hero-bg"></div>
          <div class="hero-overlay"></div>
-         <div class="container hero-content">
-            <h2>Gaya Bounder</h2>
-            <p class="hero-subtitle">Étudiant en BUT Informatique | Développeur</p>
-            <p class="hero-description">Administration, gestion et exploitation des données.</p>
-            <div class="hero-buttons">
-               <a href="#projets" class="btn btn-primary">Voir mes Projets</a>
-               <a href="assets/images/CV-Gaya-Bounder.pdf" class="btn btn-secondary" target="_blank" rel="noopener" download aria-label="Télécharger le CV de Gaya Bounder au format PDF">Télécharger mon CV</a>
+
+         <!-- Diagonal accent band -->
+         <div class="hero-band">
+            <span>BUT INFORMATIQUE</span>
+            <span class="band-sep">■</span>
+            <span>DÉVELOPPEUR</span>
+            <span class="band-sep">■</span>
+            <span>ALTERNANT SDIS78</span>
+            <span class="band-sep">■</span>
+            <span>ADMINISTRATION DES DONNÉES</span>
+            <span class="band-sep">■</span>
+         </div>
+
+         <div class="hero-content">
+            <p class="hero-label">Portfolio</p>
+            <h1 class="hero-name">Gaya<br>Bounder</h1>
+            <p class="hero-sub">Étudiant en BUT Informatique — Parcours C</p>
+            <div class="hero-cta">
+               <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+               <a href="assets/images/CV-Gaya-Bounder.pdf" class="btn btn-ghost" download>Télécharger le CV</a>
             </div>
+         </div>
+
+         <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
          </div>
       </section>
 
+      <!-- ═══════════════ TICKER ═══════════════ -->
+      <div class="ticker-wrap">
+         <div class="ticker-track">
+            <span>C++</span><span class="t-sep">■</span>
+            <span>C#</span><span class="t-sep">■</span>
+            <span>Python</span><span class="t-sep">■</span>
+            <span>Java</span><span class="t-sep">■</span>
+            <span>SQL</span><span class="t-sep">■</span>
+            <span>PHP</span><span class="t-sep">■</span>
+            <span>HTML / CSS</span><span class="t-sep">■</span>
+            <span>Godot 4</span><span class="t-sep">■</span>
+            <span>GitHub</span><span class="t-sep">■</span>
+            <span>Linux</span><span class="t-sep">■</span>
+            <span>MariaDB</span><span class="t-sep">■</span>
+            <span>Blueway / BPMN</span><span class="t-sep">■</span>
+            <!-- Duplicate for seamless loop -->
+            <span>C++</span><span class="t-sep">■</span>
+            <span>C#</span><span class="t-sep">■</span>
+            <span>Python</span><span class="t-sep">■</span>
+            <span>Java</span><span class="t-sep">■</span>
+            <span>SQL</span><span class="t-sep">■</span>
+            <span>PHP</span><span class="t-sep">■</span>
+            <span>HTML / CSS</span><span class="t-sep">■</span>
+            <span>Godot 4</span><span class="t-sep">■</span>
+            <span>GitHub</span><span class="t-sep">■</span>
+            <span>Linux</span><span class="t-sep">■</span>
+            <span>MariaDB</span><span class="t-sep">■</span>
+            <span>Blueway / BPMN</span><span class="t-sep">■</span>
+         </div>
+      </div>
+
+      <!-- ═══════════════ À PROPOS ═══════════════ -->
       <section id="apropos" class="about">
          <div class="container">
-            <h2>À propos de moi</h2>
-            
-            <article class="about-section" data-aos="fade-up">
-               <h3>Présentation</h3>
-               <p>Bonjour, je m'appelle Gaya BOUNDER, j'ai 20 ans. Je suis actuellement en deuxième année de BUT Informatique en parcours C : administration, gestion
-                  et exploitation des données. Passionné de mathématiques et d'ingénierie, j'ai toujours aspiré à travailler dans un domaine innovant. C'est pourquoi m'orienter vers l'informatique était la suite logique de mon parcours.
-               </p>
-            </article>
+            <div class="section-header" data-aos="fade-up">
+               <h2 class="section-title">À Propos<span class="title-marker">■</span></h2>
+            </div>
 
-            <article class="about-section" data-aos="fade-up">
-               <h3>Parcours</h3>
-               <p>
-                  J'ai débuté mon parcours au Lycée Charles de Gaulle à Poissy, où j'ai obtenu mon baccalauréat spécialités Mathématiques et Sciences de l'Ingénieur avec mention.
-                  Par la suite, j'ai rejoint l'IUT d'Orsay de l'université Paris-Saclay en BUT Informatique, formation dans laquelle j'ai pu suivre des cours d'algébre linéaire, de probabilité,
-                  de réseaux avancée et de programmation.
-               </p>
-            </article>
+            <div class="about-grid">
+               <!-- Big statement left -->
+               <div class="about-statement" data-aos="fade-right">
+                  <p class="statement-text">Passionné<br>d'informatique<br><span class="statement-accent">& de données.</span></p>
+                  <div class="statement-line"></div>
+                  <p class="statement-sub">IUT d'Orsay — Université Paris-Saclay<br>Alternant SDIS 78</p>
+               </div>
 
-            <article class="about-section" data-aos="fade-up">
-               <h3>Expériences</h3>
-               <p>
-                  En parallèle de mes études, je travaille en tant qu'alternant en tant qu'Administrateur GED et BPM
-                  au Service Départemental d'Incendie et de Secours des Yvelines (SDIS78). Je fais partie du service numérisation des processus et je prends part à un projet concret :
-                  La dématérialisation du dossier individuel des agents du SDIS78, donc PATS, SPP, SPV, soit près de 4000 personnes concernées par ce changement. Je travaille avec les métiers RH dans l'objectif de satisfaire leurs besoins concernant l'application que nous développons. Je participe notamment à la création des formulaires,
-                  à la définition et au paramétrage de la GED, qui à terme remplacera le DIA papier. Je développe des petits scripts et des algorithmes permettant le dépôt automatique en GED des documents déposés par les agents. J'utilise pour cela l'application "Blueway" et le BPMN (Business Process Modeling and Notation), via des algorithmes orientés low-code à base d'appels d'API, de boucles, de conditions et d'optimisations.
-               </p>
-            </article>
+               <!-- Cards right -->
+               <div class="about-cards">
+                  <article class="about-card" data-aos="fade-up" data-aos-delay="0">
+                     <div class="card-num">01</div>
+                     <h3>Présentation</h3>
+                     <p>Bonjour, je m'appelle Gaya BOUNDER, j'ai 20 ans. Je suis actuellement en deuxième année de BUT Informatique en parcours C : administration, gestion et exploitation des données. Passionné de mathématiques et d'ingénierie, m'orienter vers l'informatique était la suite logique de mon parcours.</p>
+                  </article>
 
-            <article class="about-section" data-aos="fade-up">
-               <h3>Centres d'intérêt</h3>
-               <p>Passionné de sport, j'ai pratiqué :</p>
-               <ul class="interests-list">
-                  <li><strong>Football :</strong> 5 ans en club à Carrières-sous-Poissy dont 2 ans en régional</li>
-                  <li><strong>Volley-Ball :</strong> 1 an au Lycée</li>
-                  <li><strong>Boxe Anglaise :</strong> 1 an au lycée</li>
-               </ul>
-               <p>Ces expériences sportives m'ont appris la persévérance, le travail d'équipe et la gestion du stress.</p>
-            </article>
+                  <article class="about-card" data-aos="fade-up" data-aos-delay="100">
+                     <div class="card-num">02</div>
+                     <h3>Parcours</h3>
+                     <p>Baccalauréat Mathématiques & Sciences de l'Ingénieur avec mention au Lycée Charles de Gaulle à Poissy. Puis BUT Informatique à l'IUT d'Orsay, avec des cours d'algèbre linéaire, probabilité, réseaux avancés et programmation.</p>
+                  </article>
+
+                  <article class="about-card" data-aos="fade-up" data-aos-delay="200">
+                     <div class="card-num">03</div>
+                     <h3>Expérience</h3>
+                     <p>Alternant Administrateur GED & BPM au SDIS78. Projet de dématérialisation du dossier individuel de près de 4000 agents. Développement de scripts d'automatisation via l'application Blueway, BPMN, API calls, boucles et conditions orientés low-code.</p>
+                  </article>
+
+                  <article class="about-card" data-aos="fade-up" data-aos-delay="300">
+                     <div class="card-num">04</div>
+                     <h3>Sport & Intérêts</h3>
+                     <p>Football 5 ans en club (2 ans en régional), Volley-Ball et Boxe Anglaise. Ces expériences m'ont appris la persévérance, le travail d'équipe et la gestion du stress — des valeurs que j'applique au quotidien.</p>
+                  </article>
+               </div>
+            </div>
          </div>
       </section>
 
+      <!-- ═══════════════ PROJETS ═══════════════ -->
       <section id="projets" class="projects">
          <div class="container">
-            <h2>Mes projets</h2>
-            <div class="project-list">
-               
-               <article class="project-item" data-aos="fade-up">
-                  <h3>Projet S3 - Pixel War (Jeu Multijoueur Local)</h3>
-                  <div class="project-content">
-                     <div class="project-description">
-                        <p>
-                           Actuellement en cours de réalisation (2025-2026), ce projet ambitieux vise à développer un <strong>jeu multijoueur massivement local</strong> capable d'accueillir jusqu'à <strong>200 joueurs simultanés</strong> (étudiants en amphithéâtre). 
-                           Inspiré de <em>Splatoon</em> et de la <em>Pixel War</em> (r/place), le jeu oppose quatre équipes dans une compétition de contrôle de territoire via des vaisseaux contrôlés par smartphone.
-                        </p>
-                        <p class="project-tech">
-                           <strong>Technologies :</strong> Moteur Godot 4, C# (.NET 8), Sockets TCP/UDP (bas niveau), Multithreading, Architecture Client-Serveur.
-                        </p>
-                        <p>
-                           <strong>Mon rôle :</strong> J'ai pris en charge la gestion de projet et la planification (réalisation du WBS, diagrammes de PERT et Gantt). Côté technique, je participe au développement de l'architecture réseau bas niveau (sockets) pour gérer les connexions concurrentes et assurer la synchronisation en temps réel sans latence.
-                        </p>
+            <div class="section-header" data-aos="fade-up">
+               <h2 class="section-title">Mes Projets<span class="title-marker">■</span></h2>
+            </div>
+
+            <div class="project-grid">
+
+               <article class="project-card" data-aos="fade-up">
+                  <div class="project-card-img">
+                     <img src="assets/images/projects/pixelwar.jpg" alt="Pixel War - Godot 4" loading="lazy">
+                     <div class="project-card-overlay">
+                        <span class="project-tag">En cours — 2025/2026</span>
                      </div>
-                     <div class="project-images">
-                        <img src="assets/images/projects/pixelwar.jpg" alt="Capture d'écran du projet Pixel War développé avec Godot 4" class="project-image" loading="lazy" width="300" height="auto">
+                  </div>
+                  <div class="project-card-body">
+                     <div class="project-card-meta">
+                        <span class="project-cat">Développement Jeu</span>
+                     </div>
+                     <h3>Pixel War — Multijoueur Local</h3>
+                     <p>Jeu multijoueur massivement local inspiré de <em>Splatoon</em> et de la Pixel War (r/place), capable d'accueillir jusqu'à <strong>200 joueurs simultanés</strong>. Quatre équipes s'affrontent pour le contrôle de territoire via des vaisseaux contrôlés par smartphone.</p>
+                     <div class="project-tech-list">
+                        <span>Godot 4</span>
+                        <span>C# / .NET 8</span>
+                        <span>Sockets TCP/UDP</span>
+                        <span>Multithreading</span>
                      </div>
                   </div>
                </article>
 
-               <article class="project-item" data-aos="fade-up" data-aos-delay="100">
-                  <h3>Projet S102 - Création d'un jeu vidéo en C++</h3>
-                  <div class="project-content">
-                     <div class="project-description">
-                        <p>Au cours de ma première année, j'ai travaillé sur divers projets. J'ai notamment collaboré avec une équipe pour
-                           développer un jeu vidéo en <strong>C++</strong>. Cette expérience m'a appris à travailler efficacement avec une base de code partagée.
-                           Je suis devenu compétent avec <strong>GitHub</strong> pour gérer et partager du code. J'ai mis en œuvre le déplacement automatique des
-                           ennemis avec des motifs aléatoires et des systèmes de frontières pour contenir les joueurs dans les salles de niveau. 
-                           L'objectif du jeu est simple : collecter toutes les pièces tout en évitant la mort pour gagner.
-                        </p>
+               <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                  <div class="project-card-img">
+                     <img src="assets/images/projects/project1-image.jpg" alt="Jeu vidéo C++" loading="lazy">
+                     <div class="project-card-overlay">
+                        <span class="project-tag">S102 — 2024</span>
                      </div>
-                     <div class="project-images">
-                        <img src="assets/images/projects/project1-image.jpg" alt="Interface de jeu du projet vidéo développé en C++" class="project-image" loading="lazy" width="300" height="auto">
+                  </div>
+                  <div class="project-card-body">
+                     <div class="project-card-meta">
+                        <span class="project-cat">Jeu Vidéo</span>
+                     </div>
+                     <h3>Jeu Vidéo en C++</h3>
+                     <p>Développement en équipe d'un jeu vidéo en C++. Implémentation du déplacement automatique des ennemis avec motifs aléatoires et systèmes de frontières. Gestion du code partagé via GitHub. Objectif : collecter toutes les pièces tout en évitant la mort.</p>
+                     <div class="project-tech-list">
+                        <span>C++</span>
+                        <span>GitHub</span>
+                        <span>Travail d'équipe</span>
                      </div>
                   </div>
                </article>
 
-               <article class="project-item" data-aos="fade-up" data-aos-delay="200">
-                  <h3>Projet S103 - Installation d'un SGBD sur Raspberry Pi</h3>
-                  <div class="project-content">
-                     <div class="project-description">
-                        <p>
-                           Durant ce projet en trinôme, nous avons installé et configuré un système de gestion de base de données (MariaDB) sur un Raspberry Pi 400. 
-                           À partir d'une carte SD vierge, nous avons d'abord installé le système d'exploitation <strong>Raspberry Pi OS</strong> avant de configurer le SGBD.
-                        </p>
-                        <p>
-                           Nous avons créé une base de données complète pour un système de réservation de camping, avec plusieurs tables relationnelles. 
-                           Le projet incluait la gestion des utilisateurs, la <strong>configuration réseau</strong> et l'<strong>automatisation</strong> du démarrage des services.
-                        </p>
-                        <p>
-                           Ce projet m'a permis d'acquérir des compétences en administration système <strong>Linux</strong> et en gestion de bases de données <strong>SQL</strong>, 
-                           tout en travaillant en équipe selon une méthodologie rigoureuse. Nous avons été évalués sur la qualité de notre installation 
-                           et via un rapport technique en anglais.
-                        </p>
+               <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                  <div class="project-card-img">
+                     <img src="assets/images/projects/project2-image.jpg" alt="SGBD Raspberry Pi" loading="lazy">
+                     <div class="project-card-overlay">
+                        <span class="project-tag">S103 — 2024</span>
                      </div>
-                     <div class="project-images">
-                        <img src="assets/images/projects/project2-image.jpg" alt="Configuration d'une base de données MariaDB sur Raspberry Pi" class="project-image" loading="lazy" width="300" height="auto">
+                  </div>
+                  <div class="project-card-body">
+                     <div class="project-card-meta">
+                        <span class="project-cat">Administration Système</span>
+                     </div>
+                     <h3>SGBD sur Raspberry Pi</h3>
+                     <p>Installation et configuration d'un SGBD MariaDB sur Raspberry Pi 400. Création d'une base de données pour un système de réservation de camping. Configuration réseau, automatisation des services et rapport technique en anglais.</p>
+                     <div class="project-tech-list">
+                        <span>MariaDB</span>
+                        <span>Raspberry Pi OS</span>
+                        <span>Linux</span>
+                        <span>SQL</span>
                      </div>
                   </div>
                </article>
@@ -172,157 +247,252 @@
          </div>
       </section>
 
-      <section id="competences" class="skills">
+      <!-- ═══════════════ SKILLS BANNER ═══════════════ -->
+      <div class="skills-banner">
+         <div class="banner-inner">
+            <span class="banner-label">Challenge the Code</span>
+            <div class="banner-divider">■</div>
+            <span class="banner-sub">Administration — Gestion — Exploitation des données</span>
+         </div>
+      </div>
+
+      <!-- ═══════════════ COMPÉTENCES ═══════════════ -->
+      <section id="competences" class="skills-section">
          <div class="container">
-            <h2>Mes Compétences</h2>
-            
-            <div class="skills-category">
-               <h3 class="skills-subtitle">Langages de programmation</h3>
-               <div class="skills-grid">
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
-                     <img src="assets/images/langages/cpp.png" alt="Logo C++" width="60" height="60" loading="lazy">
-                     <p>C++</p>
+            <div class="section-header" data-aos="fade-up">
+               <h2 class="section-title">Compétences<span class="title-marker">■</span></h2>
+            </div>
+
+            <div class="skills-layout">
+               <!-- Langages grid -->
+               <div class="skills-block" data-aos="fade-up">
+                  <h3 class="skills-block-title">Langages de programmation</h3>
+                  <div class="skills-grid">
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="50">
+                        <img src="assets/images/langages/cpp.png" alt="C++" loading="lazy">
+                        <p>C++</p>
+                     </div>
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="assets/images/langages/csharp.png" alt="C#" loading="lazy">
+                        <p>C#</p>
+                     </div>
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+                        <img src="assets/images/langages/python.png" alt="Python" loading="lazy">
+                        <p>Python</p>
+                     </div>
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="assets/images/langages/java.png" alt="Java" loading="lazy">
+                        <p>Java</p>
+                     </div>
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+                        <img src="assets/images/langages/html.png" alt="HTML5" loading="lazy">
+                        <p>HTML</p>
+                     </div>
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="assets/images/langages/css.png" alt="CSS3" loading="lazy">
+                        <p>CSS</p>
+                     </div>
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+                        <img src="assets/images/langages/sql.png" alt="SQL" loading="lazy">
+                        <p>PL/SQL</p>
+                     </div>
+                     <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="assets/images/langages/php.png" alt="PHP" loading="lazy">
+                        <p>PHP</p>
+                     </div>
                   </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
-                     <img src="assets/images/langages/csharp.png" alt="Logo C#" width="60" height="60" loading="lazy">
-                     <p>C#</p>
-                  </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
-                     <img src="assets/images/langages/python.png" alt="Logo Python" width="60" height="60" loading="lazy">
-                     <p>Python</p>
-                  </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
-                     <img src="assets/images/langages/java.png" alt="Logo Java" width="60" height="60" loading="lazy">
-                     <p>Java</p>
-                  </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
-                     <img src="assets/images/langages/html.png" alt="Logo HTML5" width="60" height="60" loading="lazy">
-                     <p>HTML</p>
-                  </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="350">
-                     <img src="assets/images/langages/css.png" alt="Logo CSS3" width="60" height="60" loading="lazy">
-                     <p>CSS</p>
-                  </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
-                     <img src="assets/images/langages/sql.png" alt="Logo SQL" width="60" height="60" loading="lazy">
-                     <p>PL/SQL</p>
-                  </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="450">
-                     <img src="assets/images/langages/php.png" alt="Logo PHP" width="60" height="60" loading="lazy">
-                     <p>PHP</p>
+               </div>
+
+               <!-- Langues -->
+               <div class="skills-block" data-aos="fade-up" data-aos-delay="100">
+                  <h3 class="skills-block-title">Langues</h3>
+                  <div class="lang-list">
+                     <div class="lang-item">
+                        <div class="lang-head">
+                           <span class="lang-name">Français</span>
+                           <span class="lang-level">Langue maternelle</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+                     </div>
+                     <div class="lang-item">
+                        <div class="lang-head">
+                           <span class="lang-name">Anglais</span>
+                           <span class="lang-level">Très bonnes bases techniques</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-fill" style="width:78%"></div></div>
+                     </div>
+                     <div class="lang-item">
+                        <div class="lang-head">
+                           <span class="lang-name">Espagnol</span>
+                           <span class="lang-level">Bonnes notions</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-fill" style="width:50%"></div></div>
+                     </div>
                   </div>
                </div>
             </div>
-            
-            <div class="languages-section">
-               <h3 class="skills-subtitle">Langues</h3>
-               <div class="languages-list">
-                  <div class="language-item" data-aos="fade-left">
-                     <p><strong>Français :</strong> Langue maternelle</p>
-                  </div>
-                  <div class="language-item" data-aos="fade-left" data-aos-delay="100">
-                     <p><strong>Anglais :</strong> Très bonnes bases techniques et professionnelles</p>
-                  </div>
-                  <div class="language-item" data-aos="fade-left" data-aos-delay="200">
-                     <p><strong>Espagnol :</strong> Bonnes notions me permettant d'échanger à l'oral et à l'écrit</p>
-                  </div>
+         </div>
+      </section>
+
+      <!-- ═══════════════ CONTACT ═══════════════ -->
+      <section id="contact" class="contact-section">
+         <div class="container">
+            <div class="section-header" data-aos="fade-up">
+               <h2 class="section-title">Contact<span class="title-marker">■</span></h2>
+            </div>
+
+            <div class="contact-layout">
+               <div class="contact-statement" data-aos="fade-right">
+                  <p>Disponible pour<br>une alternance,<br>un stage ou<br><span class="contact-accent">un projet.</span></p>
+               </div>
+
+               <div class="contact-links" data-aos="fade-left">
+                  <a href="mailto:gaya.mailpro@gmail.com" class="contact-item">
+                     <div class="contact-item-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                     </div>
+                     <div class="contact-item-info">
+                        <span class="contact-item-label">Email</span>
+                        <span class="contact-item-value">gaya.mailpro@gmail.com</span>
+                     </div>
+                     <span class="contact-item-arrow">→</span>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/gaya-bounder/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                     <div class="contact-item-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                     </div>
+                     <div class="contact-item-info">
+                        <span class="contact-item-label">LinkedIn</span>
+                        <span class="contact-item-value">gaya-bounder</span>
+                     </div>
+                     <span class="contact-item-arrow">→</span>
+                  </a>
+
+                  <a href="https://github.com/oggaya" target="_blank" rel="noopener noreferrer" class="contact-item">
+                     <div class="contact-item-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                     </div>
+                     <div class="contact-item-info">
+                        <span class="contact-item-label">GitHub</span>
+                        <span class="contact-item-value">oggaya</span>
+                     </div>
+                     <span class="contact-item-arrow">→</span>
+                  </a>
                </div>
             </div>
          </div>
       </section>
 
-      <section id="contact" class="contact">
-         <div class="container">
-            <h2>Contact</h2>
-            <p class="contact-intro">Vous pouvez me joindre via les moyens suivants :</p>
-            <ul class="contact-links">
-               <li data-aos="zoom-in">
-                  <span class="contact-icon">📩</span>
-                  <strong>Email:</strong> 
-                  <a href="mailto:gaya.mailpro@gmail.com" aria-label="Envoyer un email à Gaya Bounder">gaya.mailpro@gmail.com</a>
-               </li>
-               <li data-aos="zoom-in" data-aos-delay="100">
-                  <span class="contact-icon">🔗</span>
-                  <strong>LinkedIn:</strong> 
-                  <a href="https://www.linkedin.com/in/gaya-bounder/" target="_blank" rel="noopener noreferrer" aria-label="Visiter le profil LinkedIn de Gaya Bounder">Mon LinkedIn</a>
-               </li>
-               <li data-aos="zoom-in" data-aos-delay="200">
-                  <span class="contact-icon">💻</span>
-                  <strong>GitHub:</strong> 
-                  <a href="https://github.com/oggaya" target="_blank" rel="noopener noreferrer" aria-label="Visiter le profil GitHub de Gaya Bounder">Mon GitHub</a>
-               </li>
-            </ul>
+      <!-- ═══════════════ FOOTER ═══════════════ -->
+      <footer>
+         <div class="footer-top">
+            <div class="container footer-grid">
+               <div class="footer-brand">
+                  <p class="footer-logo-name">Gaya Bounder</p>
+                  <p class="footer-tagline">Administration, gestion<br>& exploitation des données.</p>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Navigation</h4>
+                  <ul>
+                     <li><a href="#accueil">Accueil</a></li>
+                     <li><a href="#apropos">À Propos</a></li>
+                     <li><a href="#projets">Projets</a></li>
+                     <li><a href="#competences">Compétences</a></li>
+                     <li><a href="#contact">Contact</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Formation</h4>
+                  <ul>
+                     <li><span>BUT Informatique — Parcours C</span></li>
+                     <li><span>IUT d'Orsay</span></li>
+                     <li><span>Université Paris-Saclay</span></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Liens</h4>
+                  <ul>
+                     <li><a href="mailto:gaya.mailpro@gmail.com">Email</a></li>
+                     <li><a href="https://www.linkedin.com/in/gaya-bounder/" target="_blank" rel="noopener">LinkedIn</a></li>
+                     <li><a href="https://github.com/oggaya" target="_blank" rel="noopener">GitHub</a></li>
+                     <li><a href="assets/images/CV-Gaya-Bounder.pdf" download>Télécharger le CV</a></li>
+                  </ul>
+               </div>
+            </div>
          </div>
-      </section>
 
-      <button id="backToTop" class="back-to-top" aria-label="Retour en haut de la page" title="Retour en haut">
-         ↑
-      </button>
-
-      <footer role="contentinfo">
-         <div class="container">
-            <h1 class="logo footer-logo">Gaya Bounder</h1>
-            <p>&copy; 2026 Gaya Bounder. Tous droits réservés.</p>
+         <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+               <p>© 2026 Gaya Bounder — Tous droits réservés.</p>
+               <p class="footer-made">Portfolio personnel</p>
+            </div>
          </div>
       </footer>
 
+      <!-- Back to top -->
+      <button id="backToTop" class="back-to-top" aria-label="Retour en haut">↑</button>
+
       <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
       <script>
-         AOS.init({
-             duration: 800,
-             easing: 'ease-out-cubic',
-             once: true,
-             offset: 100
-         });
+         AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });
 
-         const menuToggle = document.querySelector('.menu-toggle');
-         const navLinks = document.querySelector('.nav-links');
-         
-         menuToggle.addEventListener('click', () => {
-             const isExpanded = navLinks.classList.contains('active');
-             navLinks.classList.toggle('active');
-             menuToggle.setAttribute('aria-expanded', !isExpanded);
-         });
-
-         document.querySelectorAll('.nav-links a').forEach(link => {
-             link.addEventListener('click', () => {
-                 navLinks.classList.remove('active');
-                 menuToggle.setAttribute('aria-expanded', 'false');
-             });
-         });
-
-         const backToTopButton = document.getElementById('backToTop');
-         
+         // Header scroll effect
+         const header = document.getElementById('header');
          window.addEventListener('scroll', () => {
-             if (window.pageYOffset > 300) {
-                 backToTopButton.classList.add('visible');
-             } else {
-                 backToTopButton.classList.remove('visible');
-             }
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
          });
 
-         backToTopButton.addEventListener('click', () => {
-             window.scrollTo({
-                 top: 0,
-                 behavior: 'smooth'
-             });
+         // Mobile menu
+         const menuToggle = document.querySelector('.menu-toggle');
+         const mobileNav = document.getElementById('mobileNav');
+         menuToggle.addEventListener('click', () => {
+            const open = mobileNav.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', open);
+            menuToggle.classList.toggle('active', open);
+         });
+         mobileNav.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+               mobileNav.classList.remove('open');
+               menuToggle.classList.remove('active');
+               menuToggle.setAttribute('aria-expanded', false);
+            });
          });
 
+         // Back to top
+         const btt = document.getElementById('backToTop');
+         window.addEventListener('scroll', () => btt.classList.toggle('visible', window.pageYOffset > 400));
+         btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+         // Smooth scroll
          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-             anchor.addEventListener('click', function (e) {
-                 e.preventDefault();
-                 const target = document.querySelector(this.getAttribute('href'));
-                 if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            anchor.addEventListener('click', function(e) {
+               e.preventDefault();
+               const target = document.querySelector(this.getAttribute('href'));
+               if (target) {
+                  const offset = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                  window.scrollTo({ top: offset, behavior: 'smooth' });
+               }
+            });
+         });
 
-                    window.scrollTo({
-                       top: offsetPosition,
-                       behavior: 'smooth'
-                    });
-                 }
-             });
+         // Language bars animation on scroll
+         const langFills = document.querySelectorAll('.lang-fill');
+         const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                  entry.target.style.width = entry.target.getAttribute('data-width') || entry.target.style.width;
+                  entry.target.classList.add('animated');
+               }
+            });
+         }, { threshold: 0.5 });
+         langFills.forEach(fill => {
+            fill.setAttribute('data-width', fill.style.width);
+            fill.style.width = '0%';
+            observer.observe(fill);
          });
       </script>
    </body>
