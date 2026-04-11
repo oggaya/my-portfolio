@@ -14,6 +14,10 @@
       
       <title>Portfolio - Gaya Bounder | Développeur & Étudiant en Informatique</title>
       
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+      
       <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
    </head>
@@ -44,7 +48,9 @@
       <section id="accueil" class="hero">
          <div class="hero-overlay"></div>
          <div class="container hero-content">
-            <div style="margin-top: 250px;"></div> 
+            <h2>Gaya Bounder</h2>
+            <p class="hero-subtitle">Étudiant en BUT Informatique | Développeur</p>
+            <p class="hero-description">Administration, gestion et exploitation des données.</p>
             <div class="hero-buttons">
                <a href="#projets" class="btn btn-primary">Voir mes Projets</a>
                <a href="assets/images/CV-Gaya-Bounder.pdf" class="btn btn-secondary" target="_blank" rel="noopener" download aria-label="Télécharger le CV de Gaya Bounder au format PDF">Télécharger mon CV</a>
@@ -56,14 +62,14 @@
          <div class="container">
             <h2>À propos de moi</h2>
             
-            <article class="about-section">
+            <article class="about-section" data-aos="fade-up">
                <h3>Présentation</h3>
                <p>Bonjour, je m'appelle Gaya BOUNDER, j'ai 20 ans. Je suis actuellement en deuxième année de BUT Informatique en parcours C : administration, gestion
                   et exploitation des données. Passionné de mathématiques et d'ingénierie, j'ai toujours aspiré à travailler dans un domaine innovant. C'est pourquoi m'orienter vers l'informatique était la suite logique de mon parcours.
                </p>
             </article>
 
-            <article class="about-section">
+            <article class="about-section" data-aos="fade-up">
                <h3>Parcours</h3>
                <p>
                   J'ai débuté mon parcours au Lycée Charles de Gaulle à Poissy, où j'ai obtenu mon baccalauréat spécialités Mathématiques et Sciences de l'Ingénieur avec mention.
@@ -72,7 +78,7 @@
                </p>
             </article>
 
-            <article class="about-section">
+            <article class="about-section" data-aos="fade-up">
                <h3>Expériences</h3>
                <p>
                   En parallèle de mes études, je travaille en tant qu'alternant en tant qu'Administrateur GED et BPM
@@ -82,7 +88,7 @@
                </p>
             </article>
 
-            <article class="about-section">
+            <article class="about-section" data-aos="fade-up">
                <h3>Centres d'intérêt</h3>
                <p>Passionné de sport, j'ai pratiqué :</p>
                <ul class="interests-list">
@@ -201,7 +207,7 @@
                      <img src="assets/images/langages/sql.png" alt="Logo SQL" width="60" height="60" loading="lazy">
                      <p>PL/SQL</p>
                   </div>
-                  <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="skill-item" data-aos="fade-up" data-aos-delay="450">
                      <img src="assets/images/langages/php.png" alt="Logo PHP" width="60" height="60" loading="lazy">
                      <p>PHP</p>
                   </div>
@@ -211,13 +217,13 @@
             <div class="languages-section">
                <h3 class="skills-subtitle">Langues</h3>
                <div class="languages-list">
-                  <div class="language-item">
+                  <div class="language-item" data-aos="fade-left">
                      <p><strong>Français :</strong> Langue maternelle</p>
                   </div>
-                  <div class="language-item">
+                  <div class="language-item" data-aos="fade-left" data-aos-delay="100">
                      <p><strong>Anglais :</strong> Très bonnes bases techniques et professionnelles</p>
                   </div>
-                  <div class="language-item">
+                  <div class="language-item" data-aos="fade-left" data-aos-delay="200">
                      <p><strong>Espagnol :</strong> Bonnes notions me permettant d'échanger à l'oral et à l'écrit</p>
                   </div>
                </div>
@@ -230,17 +236,17 @@
             <h2>Contact</h2>
             <p class="contact-intro">Vous pouvez me joindre via les moyens suivants :</p>
             <ul class="contact-links">
-               <li>
+               <li data-aos="zoom-in">
                   <span class="contact-icon">📩</span>
                   <strong>Email:</strong> 
                   <a href="mailto:gaya.mailpro@gmail.com" aria-label="Envoyer un email à Gaya Bounder">gaya.mailpro@gmail.com</a>
                </li>
-               <li>
+               <li data-aos="zoom-in" data-aos-delay="100">
                   <span class="contact-icon">🔗</span>
                   <strong>LinkedIn:</strong> 
                   <a href="https://www.linkedin.com/in/gaya-bounder/" target="_blank" rel="noopener noreferrer" aria-label="Visiter le profil LinkedIn de Gaya Bounder">Mon LinkedIn</a>
                </li>
-               <li>
+               <li data-aos="zoom-in" data-aos-delay="200">
                   <span class="contact-icon">💻</span>
                   <strong>GitHub:</strong> 
                   <a href="https://github.com/oggaya" target="_blank" rel="noopener noreferrer" aria-label="Visiter le profil GitHub de Gaya Bounder">Mon GitHub</a>
@@ -255,6 +261,7 @@
 
       <footer role="contentinfo">
          <div class="container">
+            <h1 class="logo footer-logo">Gaya Bounder</h1>
             <p>&copy; 2026 Gaya Bounder. Tous droits réservés.</p>
          </div>
       </footer>
@@ -262,8 +269,8 @@
       <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
       <script>
          AOS.init({
-             duration: 1000,
-             easing: 'ease-in-out',
+             duration: 800,
+             easing: 'ease-out-cubic',
              once: true,
              offset: 100
          });
@@ -272,50 +279,50 @@
          const navLinks = document.querySelector('.nav-links');
          
          menuToggle.addEventListener('click', () => {
-            const isExpanded = navLinks.classList.contains('active');
-            navLinks.classList.toggle('active');
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
+             const isExpanded = navLinks.classList.contains('active');
+             navLinks.classList.toggle('active');
+             menuToggle.setAttribute('aria-expanded', !isExpanded);
          });
 
          document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-               navLinks.classList.remove('active');
-               menuToggle.setAttribute('aria-expanded', 'false');
-            });
+             link.addEventListener('click', () => {
+                 navLinks.classList.remove('active');
+                 menuToggle.setAttribute('aria-expanded', 'false');
+             });
          });
 
          const backToTopButton = document.getElementById('backToTop');
          
          window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-               backToTopButton.classList.add('visible');
-            } else {
-               backToTopButton.classList.remove('visible');
-            }
+             if (window.pageYOffset > 300) {
+                 backToTopButton.classList.add('visible');
+             } else {
+                 backToTopButton.classList.remove('visible');
+             }
          });
 
          backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-               top: 0,
-               behavior: 'smooth'
-            });
+             window.scrollTo({
+                 top: 0,
+                 behavior: 'smooth'
+             });
          });
 
          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-               e.preventDefault();
-               const target = document.querySelector(this.getAttribute('href'));
-               if (target) {
-                  const headerOffset = 80;
-                  const elementPosition = target.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+             anchor.addEventListener('click', function (e) {
+                 e.preventDefault();
+                 const target = document.querySelector(this.getAttribute('href'));
+                 if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                  window.scrollTo({
-                     top: offsetPosition,
-                     behavior: 'smooth'
-                  });
-               }
-            });
+                    window.scrollTo({
+                       top: offsetPosition,
+                       behavior: 'smooth'
+                    });
+                 }
+             });
          });
       </script>
    </body>
