@@ -92,27 +92,33 @@
             <span>C#</span><span class="t-sep">■</span>
             <span>Python</span><span class="t-sep">■</span>
             <span>Java</span><span class="t-sep">■</span>
+            <span>PL/SQL</span><span class="t-sep">■</span>
+            <span>Oracle DB</span><span class="t-sep">■</span>
             <span>PHP</span><span class="t-sep">■</span>
             <span>HTML / CSS</span><span class="t-sep">■</span>
-            <span>PL/SQL</span><span class="t-sep">■</span>
-            <span>Oracle</span><span class="t-sep">■</span>
-            <span>MariaDB / MySQL</span><span class="t-sep">■</span>
+            <span>Godot 4</span><span class="t-sep">■</span>
+            <span>Git / GitHub</span><span class="t-sep">■</span>
             <span>Linux / Bash</span><span class="t-sep">■</span>
             <span>TCP/IP · VLAN · DNS</span><span class="t-sep">■</span>
-            <span>Git / GitHub / GitLab</span><span class="t-sep">■</span>
+            <span>MariaDB / MySQL</span><span class="t-sep">■</span>
+            <span>Blueway / BPMN</span><span class="t-sep">■</span>
+            <span>Scrum / Agile</span><span class="t-sep">■</span>
             <span>Matplotlib / Jupyter</span><span class="t-sep">■</span>
             <span>C++</span><span class="t-sep">■</span>
             <span>C#</span><span class="t-sep">■</span>
             <span>Python</span><span class="t-sep">■</span>
             <span>Java</span><span class="t-sep">■</span>
+            <span>PL/SQL</span><span class="t-sep">■</span>
+            <span>Oracle DB</span><span class="t-sep">■</span>
             <span>PHP</span><span class="t-sep">■</span>
             <span>HTML / CSS</span><span class="t-sep">■</span>
-            <span>PL/SQL</span><span class="t-sep">■</span>
-            <span>Oracle</span><span class="t-sep">■</span>
-            <span>MariaDB / MySQL</span><span class="t-sep">■</span>
+            <span>Godot 4</span><span class="t-sep">■</span>
+            <span>Git / GitHub</span><span class="t-sep">■</span>
             <span>Linux / Bash</span><span class="t-sep">■</span>
             <span>TCP/IP · VLAN · DNS</span><span class="t-sep">■</span>
-            <span>Git / GitHub / GitLab</span><span class="t-sep">■</span>
+            <span>MariaDB / MySQL</span><span class="t-sep">■</span>
+            <span>Blueway / BPMN</span><span class="t-sep">■</span>
+            <span>Scrum / Agile</span><span class="t-sep">■</span>
             <span>Matplotlib / Jupyter</span><span class="t-sep">■</span>
          </div>
       </div>
@@ -174,7 +180,7 @@
                      <h3>Pixel War — Multijoueur Local</h3>
                      <p>Architecture Client-Serveur bas niveau (Sockets TCP/UDP) supportant <strong>200 connexions simultanées</strong>. Gestion du multithreading et thread safety. Pilotage de projet : WBS, PERT, Gantt.</p>
                      <div class="project-tech-list">
-                        <span>Godot 4.6.2</span><span>C# / .NET 8</span><span>Sockets TCP/UDP</span><span>Multithreading</span>
+                        <span>Godot 4</span><span>C# / .NET 8</span><span>Sockets TCP/UDP</span><span>Multithreading</span>
                      </div>
                   </div>
                </article>
@@ -569,4 +575,15 @@
             entries.forEach(entry => {
                if (entry.isIntersecting) {
                   entry.target.style.width = entry.target.getAttribute('data-width');
-                  entry.target.classList.add('anima
+                  entry.target.classList.add('animated');
+               }
+            });
+         }, { threshold: 0.5 });
+         langFills.forEach(fill => {
+            fill.setAttribute('data-width', fill.style.width);
+            fill.style.width = '0%';
+            observer.observe(fill);
+         });
+      </script>
+   </body>
+</html>
