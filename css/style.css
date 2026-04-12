@@ -55,7 +55,8 @@ header.scrolled{border-bottom-color:var(--accent)}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('../assets/images/hero.jpg') center/cover no-repeat}
+/* style.css — Lignes 63 à 65 environ */
+.hero-bg {position: absolute;inset: 0;/* 👇 Nous remplaçons l'image par une couleur sombre unie 👇 */background: var(--bg); /* Utilise la couleur de fond par défaut '#0a0a0a' */}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,10,10,.97) 0%,rgba(10,10,10,.85) 55%,rgba(10,10,10,.5) 100%)}
 .hero-band{position:absolute;bottom:80px;left:0;right:0;background:var(--accent);transform:skewY(-1.5deg);padding:10px 0;display:flex;gap:30px;align-items:center;overflow:hidden;z-index:2}
 .hero-band span{font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#000;white-space:nowrap;padding-left:30px}
@@ -264,4 +265,21 @@ footer{background:#050505}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+}
+
+/* style.css — À la toute fin */
+.logo-img-sdis {
+  width: 40px;      /* Même taille que l'image d'Eren */
+  height: 40px;
+  object-fit: contain;
+  margin-left: 5px; /* Petit espace après le prénom */
+  /* On peut ajouter un filtre pour qu'il s'intègre mieux au thème sombre si besoin */
+  filter: drop-shadow(0 0 2px rgba(245, 196, 0, 0.2)); 
+}
+
+/* Ajustement du bloc pour bien aligner les 3 éléments */
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace régulier entre les éléments */
 }
