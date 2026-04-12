@@ -269,8 +269,8 @@ footer{background:#050505}
 
 /* style.css — À la toute fin */
 .logo-img-sdis {
-  width: 40px;      /* Même taille que l'image d'Eren */
-  height: 40px;
+  width: 50px;      /* Même taille que l'image d'Eren */
+  height: 50px;
   object-fit: contain;
   margin-left: 5px; /* Petit espace après le prénom */
   /* On peut ajouter un filtre pour qu'il s'intègre mieux au thème sombre si besoin */
