@@ -26,6 +26,7 @@
                <img src="assets/images/logo.png" alt="Photo de profil de Gaya Bounder" class="logo-img">
                <span class="logo-name">Gaya Bounder</span>
                <img src="assets/images/logo-stellantis.png" alt="Logo Stellantis" class="logo-img-sdis">
+               <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch to English" aria-pressed="false">EN</button>
             </div>
             <nav role="navigation" aria-label="Navigation principale">
                <ul class="nav-links">
@@ -543,6 +544,171 @@
 
       <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
       <script>
+         const translationGroups = [
+            {
+               selector: '.nav-links a, .mobile-nav a',
+               values: ['Home', 'About', 'Projects', 'Skills', 'Highlights', 'Contact', 'Home', 'About', 'Projects', 'Skills', 'Highlights', 'Contact']
+            },
+            {
+               selector: '.hero-band > span:not(.band-sep)',
+               values: ['POLYTECH PARIS-SACLAY', 'STELLANTIS APPRENTICE', 'ENGINEERING DEGREE — 2026/2029', 'DATA MANAGEMENT & AUTOMATION SYSTEM', 'R&D TEST BENCH FACILITIES']
+            },
+            { selector: '.hero-sub', values: ['Engineering student at Polytech Paris-Saclay · Apprentice at Stellantis — Data Management & Automation System'] },
+            { selector: '.hero-cta .btn-primary', values: ['View my projects'] },
+            { selector: '.hero-cta .btn-ghost', values: ['Download my CV (in French)'] },
+            {
+               selector: '.section-title',
+               values: [
+                  'About<span class="title-marker">■</span>',
+                  'Projects<span class="title-marker">■</span>',
+                  'Skills<span class="title-marker">■</span>',
+                  'Highlights<span class="title-marker">■</span>',
+                  'Contact<span class="title-marker">■</span>'
+               ],
+               html: true
+            },
+            { selector: '.statement-text', values: ['Passionate<br>about technology<br><span class="statement-accent">& data.</span>'], html: true },
+            { selector: '.statement-sub', values: ['Polytech Paris-Saclay<br>Stellantis apprentice · Driving licence'] },
+            { selector: '.about-card h3', values: ['Introduction', 'Education', 'Experience', 'Sports & Interests'] },
+            {
+               selector: '.about-card p',
+               values: [
+                  'My name is Gaya BOUNDER, and I am 21 years old. I am a first-year engineering student at <strong>Polytech Paris-Saclay</strong> (Computer Science and Mathematical Engineering, 2026–2029), completing an apprenticeship at <strong>Stellantis</strong> in R&D (GDTA — Global Data Testing & Automation team), working on data management and test-facility automation.',
+                  'I earned a general baccalaureate in Mathematics and Engineering Sciences at Lycée Charles de Gaulle (Yvelines). I then completed a Bachelor of Technology in Computer Science at IUT d’Orsay — Université Paris-Saclay, specialising in data administration, management and processing (linear algebra, probability, advanced networking, Oracle / Teradata databases, and project-based coursework), with my final year as an apprentice. I am now pursuing an engineering degree at Polytech Paris-Saclay.',
+                  '<strong>Stellantis — R&D Engineering Apprentice, Data Management & Automation System</strong> (since September 2026, Carrières-sous-Poissy): contributing to the operation and modernisation of R&D test facilities (combustion and electric engine test benches, powertrain test benches, chassis dynamometers and battery test benches) and their associated data management.',
+                  '<strong>SDIS 78 — Document Management & BPM Administration Apprentice</strong> (September 2025 – August 2026): leading the digitisation of employee records (around 4,000 people), developing low-code solutions with Phoenix Designer, integrating APIs and designing dynamic forms.',
+                  '<strong>TotalEnergies Yvelines</strong> (November 2023 – August 2025): independently managing the service station, following HSE procedures and serving customers in a fast-paced environment.',
+                  'I played football for five years, including two years at regional level, and also practised volleyball and boxing. These experiences taught me perseverance, teamwork and how to handle pressure — values I apply every day in my apprenticeship.'
+               ],
+               html: true
+            },
+            { selector: '.project-tag', values: ['2025/2026', 'Data analysis', 'S102 — 2024', 'S103 — 2024'] },
+            { selector: '.project-cat', values: ['Distributed architecture', 'Data analysis', 'Game development', 'Systems administration'] },
+            { selector: '.project-card h3', values: ['Pixel War — Local Multiplayer', 'Olympic Games — Data Analysis', '2D C++ Video Game', 'Database on Raspberry Pi'] },
+            {
+               selector: '.project-tech-list span',
+               values: ['Godot 4', 'C# / .NET 8', 'TCP/UDP sockets', 'Multithreading', 'Python', 'Oracle DB', 'PL/SQL', 'Matplotlib', 'Jupyter', 'C++ / OOP', 'Enemy AI', 'GitHub', 'MariaDB', 'Linux', 'SQL', 'Networking']
+            },
+            {
+               selector: '.project-card p',
+               values: [
+                  'Low-level client-server architecture (TCP/UDP sockets) supporting <strong>200 simultaneous connections</strong>. Multithreading and thread safety. Project planning using WBS, PERT and Gantt charts.',
+                  'Querying an Oracle database using advanced features (triggers, views and PL/SQL). Analysis of gender parity and age trends. Data visualisation with Matplotlib in Jupyter Notebook.',
+                  'Object-oriented C++ software architecture. Implemented enemy AI with randomised patterns. Optimised memory management (pointers) and dynamic loading.',
+                  'Installed and configured MariaDB on a Raspberry Pi 400. Built a relational database for a campsite booking system, configured networking and automated services.'
+               ],
+               html: true
+            },
+            { selector: '.banner-label', values: ['Challenge the Code'] },
+            { selector: '.banner-sub', values: ['Data Administration — Management — Processing'] },
+            { selector: '.skills-block-title', values: ['Development', 'Data & Databases', 'Systems & Networking', 'Methodologies & Low-Code', 'Testing & Industry (foundational knowledge)', 'Languages'] },
+            {
+               selector: '.skill-tag-item',
+               values: [
+                  'Linux / Bash', 'TCP/IP', 'VLAN', 'DNS', 'SSH', 'Firewall', 'Git / GitHub', 'GitLab',
+                  'Scrum / Agile', 'Gantt / PERT / WBS', 'BPMN', 'Phoenix Designer', 'REST APIs', 'Workflow', 'SIPOC / KPI / CIP', 'PDCA',
+                  'Engine / powertrain / chassis dynamometer test benches', 'WLTP / WLTC cycles', 'Test data post-processing'
+               ]
+            },
+            { selector: '.lang-level', values: ['Native', 'Fluent', 'B2 — Technical and professional proficiency', 'B1 — Spoken and written communication'] },
+            { selector: '.lang-name', values: ['French', 'Kabyle', 'English', 'Spanish'] },
+            { selector: '.hl-section-sub', values: ['Beyond coding, the spirit of competition.'] },
+            { selector: '.hl-stat-label', values: ['Europe', 'France', '3 million competitive players', 'League of Legends — EUW'] },
+            {
+               selector: '.hl-desc',
+               values: [
+                  'Reaching <strong>Grandmaster</strong> — a rank reserved for the top 0.02% of players in Europe — takes much more than quick reflexes. It requires disciplined practice, constant analysis of mistakes, the ability to adapt quickly to a changing meta, and real-time pressure management.',
+                  'Ranking as the <strong>700th player in Europe</strong> and <strong>15th in France</strong> among more than 3 million competitive players reflects skills that transfer directly to work: analytical rigour, decision-making under pressure and continuous improvement.'
+               ],
+               html: true
+            },
+            { selector: '.hl-tags span', values: ['Decision-making', 'Pressure management', 'Strategic adaptation', 'Data analysis', 'Leadership'] },
+            { selector: '.hl-screen-label', values: ['Rank — Grandmaster', '🇪🇺 Europe ranking'] },
+            { selector: '.hl-screen-placeholder p', values: ['Grandmaster rank<br>screenshot', 'EU ranking — #700'], html: true },
+            { selector: '.contact-statement p', values: ['Apprentice<br>at<br><span class="contact-accent">Stellantis</span><br><span class="contact-small">Data Management & Automation System<br>Polytech Paris-Saclay · 2026–2029</span>'], html: true },
+            { selector: '.contact-item-label', values: ['Email', 'Phone', 'LinkedIn', 'GitHub'] },
+            { selector: '.footer-tagline', values: ['Apprentice at Stellantis<br>Data Management & Automation System<br>Polytech Paris-Saclay · 2026–2029'], html: true },
+            { selector: '.footer-col h4', values: ['Navigation', 'Education', 'Links'] },
+            {
+               selector: '.footer-col ul li > a, .footer-col ul li > span',
+               values: [
+                  'Home', 'About', 'Projects', 'Skills', 'Contact',
+                  'Polytech Paris-Saclay — Computer Engineering', 'BSc in Computer Science — IUT d’Orsay', 'Baccalaureate in Mathematics & Engineering Sciences',
+                  'Email', 'LinkedIn', 'GitHub', 'Download CV (in French)'
+               ]
+            },
+            { selector: '.footer-bottom p:first-child', values: ['© 2026 Gaya Bounder — All rights reserved.'] }
+         ];
+
+         const originalContent = new WeakMap();
+         const attributeTranslations = [
+            ['meta[name="description"]', 'content', 'Portfolio of Gaya Bounder — Engineering student at Polytech Paris-Saclay and apprentice at Stellantis, working in data management and R&D test automation.'],
+            ['meta[name="keywords"]', 'content', 'Gaya Bounder, portfolio, engineering student, computer science, Polytech Paris-Saclay, Stellantis, C++, C#, Python, SQL, Oracle, DevOps, engineering apprenticeship'],
+            ['meta[property="og:title"]', 'content', 'Portfolio - Gaya Bounder'],
+            ['meta[property="og:description"]', 'content', 'Engineering student at Polytech Paris-Saclay — Stellantis apprentice in Data Management & Automation System'],
+            ['.logo-img', 'alt', 'Profile photo of Gaya Bounder'],
+            ['.logo-img-sdis', 'alt', 'Stellantis logo'],
+            ['.header-inner > nav', 'aria-label', 'Main navigation'],
+            ['.project-card-img img', 'alt', 'Pixel War multiplayer game project|Olympic Games data analysis project|2D C++ video game project|MariaDB database on Raspberry Pi project'],
+            ['.hl-screen-img-wrap img', 'alt', 'Grandmaster rank in League of Legends|League of Legends European ranking'],
+            ['#backToTop', 'aria-label', 'Back to top']
+         ];
+         const originalAttributes = new WeakMap();
+         const tickerTranslations = {
+            'ROUTAGE DYNAMIQUE · TCP/UDP · VLAN · DNS · PAREFEU · CLIENT/SERVEUR': 'DYNAMIC ROUTING · TCP/UDP · VLAN · DNS · FIREWALL · CLIENT/SERVER',
+            'Modélisation UML / BPMN': 'UML / BPMN Modeling'
+         };
+
+         function setLanguage(language) {
+            translationGroups.forEach(group => {
+               const elements = document.querySelectorAll(group.selector);
+               if (elements.length !== group.values.length) {
+                  throw new Error(`Translation count mismatch for ${group.selector}: expected ${group.values.length}, found ${elements.length}`);
+               }
+
+               elements.forEach((element, index) => {
+                  if (!originalContent.has(element)) originalContent.set(element, element.innerHTML);
+                  if (language === 'en') {
+                     if (group.html) element.innerHTML = group.values[index];
+                     else element.textContent = group.values[index];
+                  } else {
+                     element.innerHTML = originalContent.get(element);
+                  }
+               });
+            });
+
+            document.querySelectorAll('.ticker-track span').forEach(element => {
+               if (!originalContent.has(element)) originalContent.set(element, element.innerHTML);
+               const originalText = originalContent.get(element).trim();
+               element.textContent = language === 'en' ? (tickerTranslations[originalText] || originalText) : originalText;
+            });
+
+            attributeTranslations.forEach(([selector, attribute, englishValue]) => {
+               const elements = document.querySelectorAll(selector);
+               const englishValues = englishValue.split('|');
+               if (elements.length !== englishValues.length) {
+                  throw new Error(`Attribute translation count mismatch for ${selector}: expected ${englishValues.length}, found ${elements.length}`);
+               }
+               elements.forEach((element, index) => {
+                  if (!originalAttributes.has(element)) originalAttributes.set(element, element.getAttribute(attribute));
+                  element.setAttribute(attribute, language === 'en' ? englishValues[index] : originalAttributes.get(element));
+               });
+            });
+
+            document.documentElement.lang = language;
+            document.title = language === 'en'
+               ? 'Portfolio - Gaya Bounder | Engineering Apprentice'
+               : 'Portfolio - Gaya Bounder | Ingénieur en Alternance';
+            languageToggle.textContent = language === 'en' ? 'FR' : 'EN';
+            languageToggle.setAttribute('aria-label', language === 'en' ? 'Passer en français' : 'Switch to English');
+            languageToggle.setAttribute('aria-pressed', language === 'en');
+         }
+
+         const languageToggle = document.getElementById('languageToggle');
+         languageToggle.addEventListener('click', () => {
+            setLanguage(document.documentElement.lang === 'fr' ? 'en' : 'fr');
+         });
+
          AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });
 
          const header = document.getElementById('header');
